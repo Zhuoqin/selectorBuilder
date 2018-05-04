@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ]
+  },
+  "typeRoots": [
+    "node_modules/@types"
+  ]
+}

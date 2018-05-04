@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="multiSelector.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="dist/multiSelectorHelper.js"></script>
+</head>
+<body>
+<div class="template-wrap">
+    <form class="form-group" id="form-example">
+        <select id="selector-example">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+    </form>
+
+    <div class="select-lib--js hidden">
+        <div class="lib-wrapper">
+            <h4 class="panel-title--js">
+            </h4>
+            <div class="steps-search-area">
+                <input type="text" class="form-control" placeholder="Type here to search..">
+            </div>
+            <div class="steps-search-lib">
+                <ul class="list-group group-lib">
+
+                </ul>
+            </div>
+        </div>
+        <div class="sel-wrapper">
+            <h4 class="panel-title-result--js">
+
+            </h4>
+            <ul class="list-group group-sel">
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function () {
+        var $form = $('#form-example');
+        var $selector = $('#selector-example');
+        var exampleTitleConfig = {
+            'searchTitle': 'Example Library Title', 'resultTitle': 'Example added List Title'
+        };
+        var exampleRules = {'required': true, 'isAllowedEmpty': true};
+        var builderExampler = new SelectorBuilder($form, $selector, exampleTitleConfig, exampleRules);
+        builderExampler.buildList();
+    })();
+</script>
+</body>
+</html>
